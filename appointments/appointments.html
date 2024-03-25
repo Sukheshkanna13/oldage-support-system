@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="appointments.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Appointments</h1>
+        <div id="currentIndianTime"></div>
+        <div id="appointmentForm">
+            <h2>Add Appointment</h2>
+            <input type="text" id="reasonForVisit" placeholder="Reason for Visit">
+            <input type="text" id="doctorsName" placeholder="Doctor's Name">
+            <input type="text" id="hospitalName" placeholder="Hospital Name">
+            <input type="date" id="appointmentDate">
+            <input type="time" id="appointmentTime" value="08:00">
+            <button onclick="addAppointment()">Add Appointment</button>
+        </div>
+        <div id="appointmentList">
+            <h2>Appointment List</h2>
+            <ul id="appointmentListItems"></ul>
+        </div>
+    </div>
+    <script src="appointments.js"></script>
+</body>
+</html>
