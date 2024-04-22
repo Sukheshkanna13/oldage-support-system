@@ -1,0 +1,80 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Light grey background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* White container background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Heading styles */
+h1 {
+    text-align: center;
+    color: #333; /* Dark grey text */
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="number"],
+button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50; /* Green button background */
+    color: #fff; /* White text */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Table styles */
+.calorie-table {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd; /* Light grey border */
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50; /* Green header background */
+    color: #fff; /* White text */
+}
+
+.delete-btn {
+    color: #f44336; /* Red delete button color */
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    text-decoration: underline; /* Underline delete button on hover */
+}

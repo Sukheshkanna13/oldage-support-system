@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Tracker</title>
+    <link rel="stylesheet" href="calorie.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calorie Tracker</h1>
+        <form id="calorie-form">
+            <input type="text" id="food-name" placeholder="Food Name" required>
+            <input type="number" id="calories" placeholder="Calories" required>
+            <button type="submit">Add Food</button>
+        </form>
+        <div class="calorie-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Food Name</th>
+                        <th>Calories</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="calorie-list"></tbody>
+            </table>
+            <div class="total-calories">
+                <strong>Total Calories:</strong> <span id="total-calories">0</span>
+            </div>
+        </div>
+    </div>
+    <script src="calorie.js"></script>
+</body>
+</html>

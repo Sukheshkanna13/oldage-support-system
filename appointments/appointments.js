@@ -80,16 +80,32 @@ function setAppointmentReminders(appointmentDate, appointmentTime) {
     let appointmentTimeInMilliseconds = appointmentDateTime.getTime();
     let oneHourBeforeTimeInMilliseconds = appointmentTimeInMilliseconds - (1 * 60 * 60 * 1000);
 
+    // Popup reminder 1 hour before the event
     if (oneHourBeforeTimeInMilliseconds > currentTime) {
         setTimeout(() => {
-            alert("Upcoming appointment in 1 hour!");
+            showNotification("Upcoming appointment in 1 hour!");
         }, oneHourBeforeTimeInMilliseconds - currentTime);
     }
 
+    // Popup reminder at the time of the event
     if (appointmentTimeInMilliseconds > currentTime) {
         setTimeout(() => {
-            alert("Appointment time!");
+            showNotification("Appointment time!");
         }, appointmentTimeInMilliseconds - currentTime);
+    }
+}
+
+function showNotification(message) {
+    if (!("Notification" in window)) {
+        alert("Browser does not support notifications");
+    } else if (Notification.permission === "granted") {
+        new Notification(message);
+    } else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then(function(permission) {
+            if (permission === "granted") {
+                new Notification(message);
+            }
+        });
     }
 }
 
