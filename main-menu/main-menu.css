@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('sample.jpeg');
+    background-image: url('images.jpeg');
+    background-size: 200%;
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
 }
-
 .menu-container {
     max-width: 800px;
     margin: 50px auto;
@@ -15,12 +15,10 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 h1 {
     text-align: center;
     color: #333;
 }
-
 .button-group {
     display: flex;
     justify-content: center;

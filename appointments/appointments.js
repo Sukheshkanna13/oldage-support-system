@@ -1,6 +1,5 @@
 let appointments = [];
 
-// Load appointments from local storage on page load
 window.onload = function() {
     let savedAppointments = localStorage.getItem('appointments');
     if (savedAppointments) {
@@ -8,7 +7,6 @@ window.onload = function() {
         displayAppointments();
     }
 
-    // Set default appointment time to current time
     let now = new Date();
     let hours = now.getHours().toString().padStart(2, '0');
     let minutes = now.getMinutes().toString().padStart(2, '0');
@@ -16,14 +14,12 @@ window.onload = function() {
     document.getElementById("appointmentTime").value = currentTime;
 };
 
-// Display current Indian time
 function displayIndianTime() {
     let options = { timeZone: 'Asia/Kolkata' };
     let indianTime = new Date().toLocaleString('en-US', options);
     document.getElementById("currentIndianTime").textContent = `Indian Time: ${indianTime}`;
 }
 
-// Update Indian time every second
 setInterval(displayIndianTime, 1000);
 
 function addAppointment() {

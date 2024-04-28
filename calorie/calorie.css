@@ -1,10 +1,14 @@
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5; /* Light grey background */
+    background-image: url('sample.jpeg');
+    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
 }
+
 
 /* Container styles */
 .container {
@@ -40,13 +44,14 @@ button {
 }
 
 button {
-    background-color: #4CAF50; /* Green button background */
+    background-color: #9fdd6c; /* Green button background */
     color: #fff; /* White text */
     cursor: pointer;
+    border-radius: 20px;
 }
 
 button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #81ebdf; /* Darker green on hover */
 }
 
 /* Table styles */
@@ -66,7 +71,7 @@ th, td {
 }
 
 th {
-    background-color: #4CAF50; /* Green header background */
+    background-color: #b5a6f6; /* Green header background */
     color: #fff; /* White text */
 }
 
